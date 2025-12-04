@@ -1,0 +1,170 @@
+/* Layout */
+.auth-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: 100vh;
+}
+
+/******** LEFT SIDE **********/
+.auth-left {
+  background: #ffffff;
+  padding: 60px 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.auth-content {
+  width: 100%;
+  max-width: 360px;
+}
+
+/******** RIGHT SIDE **********/
+.auth-right {
+  background: linear-gradient(135deg, #42c950, #029611);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+  text-align: center;
+}
+
+.hero-right-content h2 {
+  font-size: 38px;
+  margin-bottom: 10px;
+  justify-content: center;
+}
+
+.learn-btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 28px;
+  border: 2px solid rgba(255,255,255,0.4);
+  border-radius: 12px;
+  backdrop-filter: blur(8px);
+  cursor: pointer;
+  transition: 0.25s ease;
+}
+
+.learn-btn:hover {
+  background: rgba(255,255,255,0.2);
+}
+
+/******** Inside Left **********/
+.hero-img {
+  width: 160px;
+  margin-bottom: 20px;
+  animation: float 3s ease-in-out infinite;
+}
+
+.title {
+  font-size: 36px;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.subtitle {
+  font-size: 15px;
+  margin-bottom: 30px;
+  color: #555;
+}
+
+/******** Form **********/
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.input-group label {
+  font-size: 14px;
+  margin-bottom: 6px;
+  display: block;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 10px;
+  border: 1px solid #d5d6d8;
+  font-size: 15px;
+  transition: 0.2s;
+}
+
+.input-group input:focus {
+  border-color: #3b82f6;
+}
+
+.error-text {
+  font-size: 13px;
+  color: #e63946;
+  margin-top: 4px;
+}
+
+/****** checkbox + forgot row ******/
+.auth-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  margin-top: -6px;
+}
+
+/****** Button ******/
+.auth-btn {
+  width: 100%;
+  padding: 14px 0;
+  background: linear-gradient(135deg, #1ec92f, #029611);
+  border: none;
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: 0.25s ease;
+  box-shadow: 0 6px 20px rgba(59,130,246,0.35);
+}
+
+.auth-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(59,130,246,0.45);
+}
+
+/****** Signup text ******/
+.signup-text {
+  margin-top: 20px;
+  font-size: 14px;
+}
+
+/******** Animations **********/
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+  100% { transform: translateY(0); }
+}
+
+.fade-in { animation: fadeIn 0.7s ease forwards; opacity: 0; }
+@keyframes fadeIn {
+  to { opacity: 1; }
+}
+
+.slide-up { animation: slideUp 0.8s ease-out forwards; opacity: 0; transform: translateY(20px); }
+@keyframes slideUp {
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/******** Responsive **********/
+@media (max-width: 900px) {
+  .auth-container {
+    grid-template-columns: 1fr;
+  }
+  .auth-right { display: none; }
+}
+@media (max-width: 480px) {
+  .auth-left {
+    padding: 40px 20px;
+  }
+  .title {
+    font-size: 28px;
+  }
+}
